@@ -1,6 +1,6 @@
 services:
-  api:
-    container_name: api
+  tdd:
+    container_name: tdd
     build:
       context: .
       dockerfile: Dockerfile
