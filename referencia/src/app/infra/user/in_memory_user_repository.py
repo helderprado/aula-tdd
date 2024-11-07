@@ -1,6 +1,7 @@
 from uuid import UUID
 from domain.user.user_repository_interface import UserRepositoryInterface
 from domain.user.user_entity import User
+from typing import Optional
 
 
 class InMemoryUserRepository(UserRepositoryInterface):
@@ -10,7 +11,7 @@ class InMemoryUserRepository(UserRepositoryInterface):
     def save(self, user: User) -> None:
         self.users.append(user)
 
-    def get_by_id(self, user_id: UUID) -> User | None:
+    def get_by_id(self, user_id: UUID) -> Optional[User]:
         return next((user for user in self.users if user.id == user_id), None)
 
     def delete(self, user_id: UUID) -> None:

@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 from infra.api.main import app
 from uuid import UUID
 
+
 # Inicializa o cliente de teste para enviar requisições à aplicação FastAPI
 client = TestClient(app)
 
