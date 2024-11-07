@@ -3,6 +3,7 @@ from domain.task.task_entity import Task
 from uuid import uuid4
 
 
+# Teste de intergração de usuário com tarefas
 class TestUserWithTask:
 
     # Teste para adicionar tarefas ao usuário
